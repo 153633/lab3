@@ -1,14 +1,8 @@
-/**
- * @file  start.S
- *
- * @brief Kernel startup routine
- *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Tue, 23 Oct 2007 11:20:33 -0400
- *
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date   2008-07-06
- */
+@ start.S:	Kernel startup routine
+@ Authors:	Tianyi Huang <tianyih@andrew.cmu.edu>
+@          	Zixuan Liu <zixuanl@andrew.cmu.edu>
+@		Jianan Lu <jiananl@andrew.cmu.edu>
+@ Date:    	11/1/2013
 
 #include <asm.h>
 

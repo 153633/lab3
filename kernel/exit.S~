@@ -1,0 +1,18 @@
+@ Exit.S: Return to kernel
+@
+@ Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+@          Zixuan Liu <zixuanl@andrew.cmu.edu>
+@	   Jianan Lu <jiananl@andrew.cmu.edu>
+@ Date:    10/23/2013
+
+	.file	"exit.S"
+	.text
+	.global exit
+
+exit:   
+	ldr	r5, =ExitStatus		@ Store the ExitStatus from Usermode   
+	str	r0, [r5]		@ Return the status in the kernel
+	ldr	r5, =link 
+	ldr	lr, [r5]		@ Restore the lr from globle value
+	b	lr			@ Return back to the kernel
+  
