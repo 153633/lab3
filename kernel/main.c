@@ -46,7 +46,6 @@ int kmain(int argc, char** argv, uint32_t table)
 
 	setup();
 	install_irqhandler();
-	while(1);
 
 	install_handler();			// "Wire in" my own SWI handler
 	Usermode(argc, argv);			// Change the mode to user mode, set the user stack and jump to user program. 
