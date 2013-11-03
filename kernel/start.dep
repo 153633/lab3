@@ -1,0 +1,5 @@
+/home/tianyihuang/Downloads/lab3-support/kernel/start.o:  \
+ /home/tianyihuang/Downloads/lab3-support/kernel/start.S \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/asm.h
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/asm.h:

@@ -1,17 +1,22 @@
-/** @file exit.S
- *
- * @brief exit sycall wrapper
- *
- * @author Mike Kasick <mkasick@andrew.cmu.edu>
- * @date   Sun, 07 Oct 2007 01:52:31 -0400
- * 
- * @author Kartik Subramanian <ksubrama@andrew.cmu.edu>
- * @date 2008-10-29
- */
+@ exit.S: exit sycall wrapper
+@
+@ Authors: Tianyi Huang <tianyih@andrew.cmu.edu>
+@          Zixuan Liu <zixuanl@andrew.cmu.edu>
+@	   Jianan Lu <jiananl@andrew.cmu.edu>
+@ Date:    10/13/2013
 
 #include <asm.h>
+#include <bits/swi.h>
 
-	.file "exit.S"
+	.file	"exit.S"
+	.text
 
-FUNC(exit)
-	@ Add code here.  Put your name at the top.
+	.global	exit
+exit:
+        stmfd   sp!, {r4-r11}	@ as a called routine of APCS, preserve r4 - r11 (but in fact we won't use them)
+        ldr     r4, [sp, #32]	@ transfer from APCS to OABI, load the argument #5 - argument #7 to r4 - r6
+        ldr     r5, [sp, #36]
+        ldr     r6, [sp, #40]
+        swi     EXIT_SWI	@ use syscall exit, argumens r0 is used
+
+	

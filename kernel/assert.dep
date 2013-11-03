@@ -1,0 +1,26 @@
+/home/tianyihuang/Downloads/lab3-support/kernel/assert.o:  \
+ /home/tianyihuang/Downloads/lab3-support/kernel/assert.c \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/assert.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/types.h \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/psr.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/exception.h
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/assert.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h:
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/psr.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/exception.h:

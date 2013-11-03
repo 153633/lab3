@@ -15,20 +15,23 @@
 #include <arm/timer.h>
 #include <arm/reg.h>
 
-uint32_t global_data;
-
-
 #include <bits/swi.h>
 #include <bits/fileno.h>
 #include <bits/errno.h>
-//#include <exports.h>
+
 #include <GlobalConstant.h>
+
+uint32_t global_data;
 
 char inbuf[MAXINPUTSIZE];			// The buffer of the read_sys function; used to store all the input data from the command line.
 int inbufindex = 0;				// Pointer of inbuf[MAXINPUTSIZE] buffer.
+
 int32_t read_sys(int, char*, uint32_t);		// Read syscall function, read input from STDIN
 int32_t write_sys(int, char*, uint32_t);		// Write syscall function, write output to STDOUT
 void    exit_sys(int);				// Exit syscall function
+uint32_t time_sys();
+void	 sleep_sys(uint32_t);
+
 int32_t getSWI(int, int*);			// Dispatch the SWI to the appropriate syscall
 void install_handler();				// "Wire in" my own SWI handler
 void resume_handler();				// Resume the two instructions of the old SWI handler
@@ -36,24 +39,56 @@ void resume_handler();				// Resume the two instructions of the old SWI handler
 void setup();
 void install_irqhandler();
 void IRQ_Handler();
+void C_IRQ_Handler();
+void test();
 
 
 int kmain(int argc, char** argv, uint32_t table)
 {
 	app_startup(); /* bss is valid after this point */
 	global_data = table;
+	printf("Start!\n");
+	//test();
+	//printf("Enable IRQ finished!\n");
+	
 
+
+/*
+	printf("Start setup!\n");
 	setup();
-	install_irqhandler();
-	while(1);
 
+	printf("ICMR: 0x%x\n", reg_read(INT_ICMR_ADDR));
+	printf("ICLR: 0x%x\n", reg_read(INT_ICLR_ADDR));
+	printf("ICPR: 0x%x\n", reg_read(INT_ICPR_ADDR));
+	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
+	printf("OSMR0: %d\n", reg_read(OSTMR_OSMR_ADDR(0)));
+	printf("OSSR: 0x%x\n", reg_read(OSTMR_OSSR_ADDR));
+	printf("OIER: 0x%x\n", reg_read(OSTMR_OIER_ADDR));
+
+	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
+	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
+	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
+
+	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
+	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
+	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
+
+	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
+	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
+	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
+
+*/
+
+	install_irqhandler();
 	install_handler();			// "Wire in" my own SWI handler
 	Usermode(argc, argv);			// Change the mode to user mode, set the user stack and jump to user program. 
 						// Parameters argc and argv are passed from the kernel to user program successfully, although we don't use them.
+
 	resume_handler();			// Resume the two instructions of the old SWI handler
 	restore();				// Restore the u-boot context (cpsr, sp, registers)
 	return ExitStatus;	
 }
+
 
 // Dispatch the SWI to the appropriate syscall
 int32_t getSWI(int num, int *sp) {
@@ -65,11 +100,61 @@ int32_t getSWI(int num, int *sp) {
 		case EXIT_SWI:
 			exit_sys((int) *sp);
 			break;
+		case TIME_SWI:
+			return time_sys();
+		case SLEEP_SWI:
+			sleep_sys((uint32_t) *sp);
+			return 0; 
 		default:
 			break;
 	}
 	return 0;
 }
+
+
+uint32_t time_sys() {
+	return system_time;
+}
+
+void sleep_sys(uint32_t msec) {
+
+	printf("sleeping %d ms\n", msec);
+	printf("start from system time: %d\n", system_time);
+
+	reg_write(OSTMR_OIER_ADDR, 0);			// mask, make sure there's no timer interrupts
+	reg_write(OSTMR_OSSR_ADDR, OSTMR_OSSR_M0);	// clear the bit, otherwise there might be an interrupt after syscall
+
+	reg_write(OSTMR_OSCR_ADDR, 0xff0fffff);		// for test
+	printf("Assume oscr starts from %x\n",reg_read(OSTMR_OSCR_ADDR));
+
+	uint32_t start_time = reg_read(OSTMR_OSCR_ADDR)/32500;		// start time
+	printf("start time: %d\n", start_time);
+	uint32_t current_time = start_time;				// current time
+	uint32_t tmp_time;						// tmp_time stores oscr
+	uint32_t current_time_base = 0;					// 'base' is for continuing computing current time after oscr reaches UINT32_MAX
+
+	while (10 * (current_time - start_time) < msec) {
+		tmp_time = reg_read(OSTMR_OSCR_ADDR);
+		if (tmp_time > UINT32_MAX - 3250) {			// need to be changed, 3250 could be any reasonable number
+			current_time_base = current_time_base + tmp_time/32500;		// update 'base'
+			printf("oscr booooooommmm at %x\n", tmp_time);
+			printf("base: %d\n", current_time_base);
+			reg_write(OSTMR_OSCR_ADDR, 0);			// reset the OSCR after reaching UINT32_MAX
+			//printf("oscr: %d\n",reg_read(OSTMR_OSCR_ADDR));
+			tmp_time = 0;
+		}
+		current_time = current_time_base + tmp_time/32500;	// update current time
+	}
+
+	printf("end time: %d\n", current_time);
+	system_time = system_time + current_time - start_time;		// update system time
+
+	reg_write(OSTMR_OIER_ADDR, OSTMR_OIER_E0);			// unmask OIER
+
+	//printf("oscr: %d\n",reg_read(OSTMR_OSCR_ADDR));
+	printf("end sleeping...current system time: %d\n", system_time);
+}
+
 
 int32_t read_sys(int fd, char *buf, uint32_t count) {
 	// Check if it is reading from the STDIO
@@ -190,7 +275,7 @@ void exit_sys(int status) {
 
 // hijack the Uboot's swi handler
 void install_handler() {
-	uint32_t *swi_entry = (uint32_t *)VECTORTABLE_SWI_ENTRY;			// swi vector
+	int *swi_entry = (int *)VECTORTABLE_SWI_ENTRY;			// swi vector
 
 	if ((((*swi_entry) ^ 0xe59ff000) & 0xfffff000) == 0) {		// check the instruction at swi vector to see if it's legal 
 	} else if ((((*swi_entry) ^ 0xe51ff000) & 0xfffff000) == 0) {
@@ -198,18 +283,18 @@ void install_handler() {
 		exit(0x0badc0de);					// if illegal, exit with status 0x0badc0de
 	}
 	
-	int32_t offset = (*swi_entry) & 0x0fff;
-	uint32_t jump_entry = VECTORTABLE_SWI_ENTRY + PC_CURRENTADDR_OFFSET + offset;	// address of jump table entry
+	int offset = (*swi_entry) & 0x0fff;
+	int jump_entry = VECTORTABLE_SWI_ENTRY + PC_CURRENTADDR_OFFSET + offset;	// address of jump table entry
 
-	uint32_t *iaddrptr = *((uint32_t**)jump_entry);				// address of uboot's swi hander instruction
+	int *iaddrptr = *((int**)jump_entry);				// address of uboot's swi hander instruction
 
-	iaddr_1 = (uint32_t *) iaddrptr;					// store the address and content of uboot's swi handler instruction 
-	iaddr_2 = (uint32_t *) (iaddrptr + 1);
+	iaddr_1 = (int *) iaddrptr;					// store the address and content of uboot's swi handler instruction 
+	iaddr_2 = (int *) (iaddrptr + 1);
 	instruction1 = *iaddr_1;
 	instruction2 = *iaddr_2;
 	
 	*iaddrptr = LOAD_PC_PC_4_ENCODING;				// hijack using 'ldr pc, [pc, #-4]'
-	*(iaddrptr+1) = (uint32_t)S_Handler;					// hijsck using address of our swi handler
+	*(iaddrptr+1) = (int)S_Handler;					// hijsck using address of our swi handler
 
 }
 
@@ -227,9 +312,10 @@ void setup() {
 
 	// Setup the timer
 	reg_write(OSTMR_OSCR_ADDR, 0);			// reset the OSCR
-	reg_write(OSTMR_OSMR_ADDR(0), UINT32_MAX);	// set the initial OSMR0 to 0xFFFFFFFF
+	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
+	reg_write(OSTMR_OSMR_ADDR(0), 32500);	// set the initial OSMR0 to 32500, so it will trigger an interrupt every 10ms
 
-	reg_write(OSTMR_OSMR_ADDR(0), 20);// for test
+	//reg_write(OSTMR_OSMR_ADDR(0), 20);// for test
 
 	reg_write(OSTMR_OIER_ADDR, OSTMR_OIER_E0);	// only enable the interrupt of OSMR0
 	reg_write(OSTMR_OSSR_ADDR, OSTMR_OSSR_M0);	// clear the bit initially
@@ -238,7 +324,7 @@ void setup() {
 
 // hijack the Uboot's IRQ handler
 void install_irqhandler() {
-	uint32_t *swi_entry = (uint32_t *)VECTORTABLE_IRQ_ENTRY;			// IRQ vector
+	int *swi_entry = (int *)VECTORTABLE_IRQ_ENTRY;			// IRQ vector
 
 	if ((((*swi_entry) ^ 0xe59ff000) & 0xfffff000) == 0) {		// check the instruction at IRQ vector to see if it's legal 
 	} else if ((((*swi_entry) ^ 0xe51ff000) & 0xfffff000) == 0) {
@@ -246,21 +332,26 @@ void install_irqhandler() {
 		exit(0x0badc0de);					// if illegal, exit with status 0x0badc0de
 	}
 	
-	int32_t offset = (*swi_entry) & 0x0fff;
-	uint32_t jump_entry = VECTORTABLE_IRQ_ENTRY + PC_CURRENTADDR_OFFSET + offset;	// address of jump table entry
+	int offset = (*swi_entry) & 0x0fff;
+	int jump_entry = VECTORTABLE_IRQ_ENTRY + PC_CURRENTADDR_OFFSET + offset;	// address of jump table entry
 
-	uint32_t *iaddrptr = *((uint32_t**)jump_entry);				// address of uboot's IRQ handler instruction
+	int *iaddrptr = *((int**)jump_entry);				// address of uboot's IRQ handler instruction
 
-	irq_iaddr_1 = (uint32_t *) iaddrptr;					// store the address and content of uboot's IRQ handler instruction 
-	irq_iaddr_2 = (uint32_t *) (iaddrptr + 1);
+	irq_iaddr_1 = (int *) iaddrptr;					// store the address and content of uboot's IRQ handler instruction 
+	irq_iaddr_2 = (int *) (iaddrptr + 1);
 	irq_instruction1 = *irq_iaddr_1;
 	irq_instruction2 = *irq_iaddr_2;
 	
 	*iaddrptr = LOAD_PC_PC_4_ENCODING;				// hijack using 'ldr pc, [pc, #-4]'
-	*(iaddrptr+1) = (uint32_t)IRQ_Handler;				// hijsck using address of our IRQ handler
+	*(iaddrptr+1) = (int)IRQ_Handler;				// hijsck using address of our IRQ handler
 
 }
 
-void IRQ_Handler() {
-	puts("Timer interrupt!\n");
+void C_IRQ_Handler() {
+	system_time++;
+	printf("%d\n", system_time);
+	printf("Timer interrupt!\n");
+	reg_write(OSTMR_OSCR_ADDR, 0);			// reset the OSCR
+	reg_set(OSTMR_OSSR_ADDR, 1);
+	printf("Return from interrupt!\n");
 }

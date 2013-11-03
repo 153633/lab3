@@ -1,0 +1,44 @@
+/home/tianyihuang/Downloads/lab3-support/kernel/main.o:  \
+ /home/tianyihuang/Downloads/lab3-support/kernel/main.c \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/types.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/psr.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/exception.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/interrupt.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/timer.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/reg.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/bits/swi.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/bits/fileno.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/bits/errno.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/GlobalConstant.h
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h:
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/psr.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/exception.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/interrupt.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/timer.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/reg.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/bits/swi.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/bits/fileno.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/bits/errno.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/GlobalConstant.h:

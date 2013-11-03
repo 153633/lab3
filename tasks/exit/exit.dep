@@ -1,0 +1,5 @@
+/home/tianyihuang/Downloads/lab3-support/tasks/exit/exit.o:  \
+ /home/tianyihuang/Downloads/lab3-support/tasks/exit/exit.S \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h:

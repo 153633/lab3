@@ -1,0 +1,8 @@
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/exit.o:  \
+ /home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/exit.S \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h:

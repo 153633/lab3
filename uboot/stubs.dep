@@ -1,0 +1,14 @@
+/home/tianyihuang/Downloads/lab3-support/uboot/stubs.o:  \
+ /home/tianyihuang/Downloads/lab3-support/uboot/stubs.c \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/types.h \
+  /home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h \
+  /home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/exports.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/kernel/include/stdarg.h:
+
+/home/tianyihuang/Downloads/lab3-support/uboot/include/_exports.h:

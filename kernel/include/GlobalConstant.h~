@@ -22,12 +22,11 @@ int *irq_iaddr_1;				// address of the first instruction we altered (for IRQ)
 int *irq_iaddr_2;				// address of the second instruction we altered (for IRQ)
 int irq_instruction1;				// content of the first instruction we altered (for IRQ)
 int irq_instruction2;				// content of the second instruction we altered (for IRQ)
-extern uint32_t oldspsr;				// stores the old svc spsr
-extern uint32_t oldsp;				// stores the old svc sp
-extern uint32_t link;				// stores the old svc link register, which has the address of next instruction after calling user app in kernel
-extern int32_t value;				// stores return value of syscall
-extern int32_t ExitStatus;				// stores exit status from user app to kernel to system
-
+extern int oldspsr;				// stores the old svc spsr
+extern int oldsp;				// stores the old svc sp
+extern int link;				// stores the old svc link register, which has the address of next instruction after calling user app in kernel
+extern int value;				// stores return value of syscall
+extern int ExitStatus;				// stores exit status from user app to kernel to system
 extern uint64_t system_time;
 
 void S_Handler(int);				// declares S_Handler
@@ -36,6 +35,7 @@ void restore();					// restores some svc registers
 void exit(int);					// restores link register and returns ExitStatus to kernel
 
 void IRQ_Handler();
+void test();
 
 #endif
 

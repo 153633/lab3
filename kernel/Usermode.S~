@@ -62,7 +62,8 @@ label4:
 		                        @ sp contains the argc and sp+4 is the argv[0]
 								@ We have tested that the arguments from kernel main
 								@ have successfully been passed to the User main
-                		  
+
+		bl	setup 		  
 		ldr     pc, =0xa0000000	@ go to userprogram
         
 		

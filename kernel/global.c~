@@ -9,6 +9,9 @@
 uint32_t oldsp = 0;
 uint32_t oldspsr = 0;
 uint32_t link = 0 ;
+
 int32_t value = 0 ;
 int32_t ExitStatus = 0;
+
+uint64_t system_time = 0;
 

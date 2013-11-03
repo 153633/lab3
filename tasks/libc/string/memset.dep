@@ -1,0 +1,11 @@
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/string/memset.o:  \
+ /home/tianyihuang/Downloads/lab3-support/tasks/libc/string/memset.c \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/string.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/string.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h:

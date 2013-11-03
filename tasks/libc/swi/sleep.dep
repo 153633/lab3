@@ -1,0 +1,8 @@
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/sleep.o:  \
+ /home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/sleep.S \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h:

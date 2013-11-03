@@ -13,5 +13,14 @@ int main(int argc, char** argv)
 {
 	const char hello[] = "Hello World\r\n";
 	write(STDOUT_FILENO, hello, sizeof(hello) - 1);
+	int i = 0;
+	int j = 0;
+	for(i=0;i<100;i++)
+	{
+		write(STDOUT_FILENO, hello, sizeof(hello) - 1);
+		for(j=0;j<100000;j++)
+			j++;
+	}
+	sleep(10000);
 	return 0;
 }

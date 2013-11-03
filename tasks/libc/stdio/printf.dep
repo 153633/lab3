@@ -1,0 +1,23 @@
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/stdio/printf.o:  \
+ /home/tianyihuang/Downloads/lab3-support/tasks/libc/stdio/printf.c \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdio.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdarg.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h \
+  /home/tianyihuang/Downloads/lab3-support/tasks/libc/stdio/doprnt.h
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdio.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdarg.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h:
+
+/home/tianyihuang/Downloads/lab3-support/tasks/libc/stdio/doprnt.h:
