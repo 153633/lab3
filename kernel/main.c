@@ -7,6 +7,7 @@
  * Date:    10/23/2013
  */
 
+
 #include <exports.h>
 
 #include <arm/psr.h>
@@ -56,6 +57,10 @@ int kmain(int argc, char** argv, uint32_t table)
 /*
 	printf("Start setup!\n");
 	setup();
+<<<<<<< HEAD
+=======
+	install_irqhandler();
+>>>>>>> f1128302919db4482afeaacf0cf4cec5e3647817
 
 	printf("ICMR: 0x%x\n", reg_read(INT_ICMR_ADDR));
 	printf("ICLR: 0x%x\n", reg_read(INT_ICLR_ADDR));
