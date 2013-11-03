@@ -22,5 +22,11 @@ int main(int argc, char** argv)
 			j++;
 	}
 	sleep(10000);
+	for(i=0;i<100;i++)
+	{
+		write(STDOUT_FILENO, hello, sizeof(hello) - 1);
+		for(j=0;j<100000;j++)
+			j++;
+	}
 	return 0;
 }

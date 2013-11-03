@@ -1,11 +1,11 @@
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/string/strchr.o:  \
- /home/tianyihuang/Downloads/lab3-support/tasks/libc/string/strchr.c \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/string.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/string/strchr.o:  \
+ /home/tianyihuang/Documents/18342/lab3/tasks/libc/string/strchr.c \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/string.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/string.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/string.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:

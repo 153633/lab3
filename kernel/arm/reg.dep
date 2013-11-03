@@ -1,11 +1,11 @@
-/home/tianyihuang/Downloads/lab3-support/kernel/arm/reg.o:  \
- /home/tianyihuang/Downloads/lab3-support/kernel/arm/reg.c \
-  /home/tianyihuang/Downloads/lab3-support/kernel/include/types.h \
-  /home/tianyihuang/Downloads/lab3-support/kernel/include/arm/reg.h \
-  /home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h
+/home/tianyihuang/Documents/18342/lab3/kernel/arm/reg.o:  \
+ /home/tianyihuang/Documents/18342/lab3/kernel/arm/reg.c \
+  /home/tianyihuang/Documents/18342/lab3/kernel/include/types.h \
+  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h \
+  /home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h
 
-/home/tianyihuang/Downloads/lab3-support/kernel/include/types.h:
+/home/tianyihuang/Documents/18342/lab3/kernel/include/types.h:
 
-/home/tianyihuang/Downloads/lab3-support/kernel/include/arm/reg.h:
+/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h:
 
-/home/tianyihuang/Downloads/lab3-support/kernel/include/inline.h:
+/home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h:

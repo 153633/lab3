@@ -1,8 +1,8 @@
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/write.o:  \
- /home/tianyihuang/Downloads/lab3-support/tasks/libc/swi/write.S \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/swi/write.o:  \
+ /home/tianyihuang/Documents/18342/lab3/tasks/libc/swi/write.S \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/asm.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/swi.h
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/asm.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/asm.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/swi.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/swi.h:

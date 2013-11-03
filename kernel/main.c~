@@ -29,9 +29,9 @@ int inbufindex = 0;				// Pointer of inbuf[MAXINPUTSIZE] buffer.
 
 int32_t read_sys(int, char*, uint32_t);		// Read syscall function, read input from STDIN
 int32_t write_sys(int, char*, uint32_t);		// Write syscall function, write output to STDOUT
-void    exit_sys(int);				// Exit syscall function
+void exit_sys(int);				// Exit syscall function
 uint32_t time_sys();
-void	 sleep_sys(uint32_t);
+void sleep_sys(uint32_t);
 
 int32_t getSWI(int, int*);			// Dispatch the SWI to the appropriate syscall
 void install_handler();				// "Wire in" my own SWI handler
@@ -49,40 +49,6 @@ int kmain(int argc, char** argv, uint32_t table)
 	app_startup(); /* bss is valid after this point */
 	global_data = table;
 	printf("Start!\n");
-	//test();
-	//printf("Enable IRQ finished!\n");
-	
-
-
-/*
-	printf("Start setup!\n");
-	setup();
-<<<<<<< HEAD
-=======
-	install_irqhandler();
->>>>>>> f1128302919db4482afeaacf0cf4cec5e3647817
-
-	printf("ICMR: 0x%x\n", reg_read(INT_ICMR_ADDR));
-	printf("ICLR: 0x%x\n", reg_read(INT_ICLR_ADDR));
-	printf("ICPR: 0x%x\n", reg_read(INT_ICPR_ADDR));
-	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
-	printf("OSMR0: %d\n", reg_read(OSTMR_OSMR_ADDR(0)));
-	printf("OSSR: 0x%x\n", reg_read(OSTMR_OSSR_ADDR));
-	printf("OIER: 0x%x\n", reg_read(OSTMR_OIER_ADDR));
-
-	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
-	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
-	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
-
-	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
-	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
-	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
-
-	printf("OSCR: %d\n", reg_read(OSTMR_OSCR_ADDR));
-	printf("OSSR: %d\n", reg_read(OSTMR_OSSR_ADDR));
-	printf("ICPR: %d\n", reg_read(INT_ICPR_ADDR));
-
-*/
 
 	install_irqhandler();
 	install_handler();			// "Wire in" my own SWI handler

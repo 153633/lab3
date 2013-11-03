@@ -121,7 +121,7 @@ void sleep_sys(uint32_t msec) {
 	system_time = system_time + current_time - start_time;		// update system time
 
 	reg_write(OSTMR_OIER_ADDR, OSTMR_OIER_E0);			// unmask OIER
-
+	reg_write(OSTMR_OSCR_ADDR, 0);					// reset the OSCR
 	//printf("oscr: %d\n",reg_read(OSTMR_OSCR_ADDR));
 	printf("end sleeping...current system time: %d\n", system_time);
 }

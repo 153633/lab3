@@ -1,23 +1,23 @@
-/home/tianyihuang/Downloads/lab3-support/tasks/rot13/rot13.o:  \
- /home/tianyihuang/Downloads/lab3-support/tasks/rot13/rot13.c \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdlib.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/errno.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/errno.h
+/home/tianyihuang/Documents/18342/lab3/tasks/rot13/rot13.o:  \
+ /home/tianyihuang/Documents/18342/lab3/tasks/rot13/rot13.c \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/errno.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/errno.h
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/stdlib.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/errno.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/errno.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/errno.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/errno.h:

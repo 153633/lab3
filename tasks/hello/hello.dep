@@ -1,14 +1,14 @@
-/home/tianyihuang/Downloads/lab3-support/tasks/hello/hello.o:  \
- /home/tianyihuang/Downloads/lab3-support/tasks/hello/hello.c \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h
+/home/tianyihuang/Documents/18342/lab3/tasks/hello/hello.o:  \
+ /home/tianyihuang/Documents/18342/lab3/tasks/hello/hello.c \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
+  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/unistd.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/fileno.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/sys/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Downloads/lab3-support/tasks/libc/include/bits/types.h:
+/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:

@@ -21,6 +21,6 @@ int main(int argc, char** argv)
 		for(j=0;j<100000;j++)
 			j++;
 	}
-	sleep(1000000);
+	sleep(10000);
 	return 0;
 }
