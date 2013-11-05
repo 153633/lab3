@@ -14,20 +14,41 @@
                                           
 #define N 10                              
                                    
-int main(int argc, char *argv[]) {        
+int main(int argc,char* argv[]) {        
 
         int readResult;			// readResult stores the return value of read
-	int writeResult;		// writeResult stores the return value of write
-	int writeloc;          		// writeloc stores the index of the last character we write
+		int writeResult;		// writeResult stores the return value of write
+		int writeloc;          		// writeloc stores the index of the last character we write
         char inBuffer[N];		// inBuffer is the buffer storing input
-	char outBuffer[N]; 		// outBuffer stores the output values
+		char outBuffer[N+1]; 		// outBuffer stores the output values
+	outBuffer[N] = '\n';
+      	int tmp;
 
-	write(1,(char *)argv[0],2);
+
+		write(1,"Firstly, let's test the argumens\n",33); //Begain to test the arguments 
+		if(argc == 0)
+			write(1,"There is no arguments",21);
+			else
+			{
+				write(1,"Arguments are: ",15);
+				for(tmp = 0; tmp < argc; tmp++)
+				{
+					while(*(argv[tmp]) != 0)
+						{
+							write(1, argv[tmp],1);
+							argv[tmp]++;
+ 						}						
+					write(1, "  ", 2);
+
+				}
+				write(1,"\n", 1);
+			}
+
 
         while ((readResult = read(STDIN_FILENO, inBuffer, N)) > 0) {	// check if more than 0 bytes are read and no error
 
                 int cnt;		// index of characters
-        
+
 		for (cnt = 0; cnt < readResult; cnt++) {
 			if ((inBuffer[cnt] >= 65 && inBuffer[cnt] <= 77) || (inBuffer[cnt] >= 97 && inBuffer[cnt] <= 109)) {
 				outBuffer[cnt] = inBuffer[cnt] + 13;	// A - M or a - m
@@ -47,19 +68,21 @@ int main(int argc, char *argv[]) {
 		} while (writeResult > 0 && writeloc != readResult);	// if it has not yet ouput all the characters that we read (write returns short count), 
 									// then continue writing
 
+		// if the buffer is full, then print a new line for new input
+		if ((readResult == 10) && (outBuffer[N-1] != '\n') && (outBuffer[N-1] != '\r'))
+			writeResult = write(STDOUT_FILENO, outBuffer + N, 1);
+
 		if (writeResult < 0) {					// as long as error occurs in write, it terminates with status 1
-			write(1, "write error in rot13\n",7);
 			exit(1);
 		}
 
         }       
                                   
-        if (readResult == 0) {    	// if zero byte is read, exit with status 0                                                   
-			    exit(10);                          
+        if (readResult == 0) {    	// if zero byte is read, exit with status 0                                                                 
+                exit(0);                          
         }                                         
         else if (readResult < 0) {      // terminate with status 1
-            write(1,"read error in rot13\n",7);  
-				exit(1);                                               
+                exit(1);                                               
         }  
                   
         return 1;

@@ -1,44 +1,44 @@
-/home/tianyihuang/Documents/18342/lab3/kernel/main.o:  \
- /home/tianyihuang/Documents/18342/lab3/kernel/main.c \
-  /home/tianyihuang/Documents/18342/lab3/uboot/include/exports.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/stdarg.h \
-  /home/tianyihuang/Documents/18342/lab3/uboot/include/_exports.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/psr.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/exception.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/interrupt.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/timer.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/bits/swi.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/bits/fileno.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/bits/errno.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/GlobalConstant.h
+/home/jianan/18342/lab3/lab3-master/kernel/main.o:  \
+ /home/jianan/18342/lab3/lab3-master/kernel/main.c \
+  /home/jianan/18342/lab3/lab3-master/uboot/include/exports.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/types.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/stdarg.h \
+  /home/jianan/18342/lab3/lab3-master/uboot/include/_exports.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/psr.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/inline.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/exception.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/interrupt.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/timer.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/reg.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/bits/swi.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/bits/fileno.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/bits/errno.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/GlobalConstant.h
 
-/home/tianyihuang/Documents/18342/lab3/uboot/include/exports.h:
+/home/jianan/18342/lab3/lab3-master/uboot/include/exports.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/types.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/stdarg.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/stdarg.h:
 
-/home/tianyihuang/Documents/18342/lab3/uboot/include/_exports.h:
+/home/jianan/18342/lab3/lab3-master/uboot/include/_exports.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/psr.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/psr.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/inline.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/exception.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/exception.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/interrupt.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/interrupt.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/timer.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/timer.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/reg.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/bits/swi.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/bits/swi.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/bits/fileno.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/bits/fileno.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/bits/errno.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/bits/errno.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/GlobalConstant.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/GlobalConstant.h:

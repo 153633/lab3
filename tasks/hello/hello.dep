@@ -1,14 +1,14 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/hello/hello.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/hello/hello.c \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h
+/home/jianan/18342/lab3/lab3-master/tasks/hello/hello.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/hello/hello.c \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/unistd.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/fileno.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/unistd.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/fileno.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h:

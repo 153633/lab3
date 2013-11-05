@@ -1,17 +1,17 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/stdio/sprintf.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/libc/stdio/sprintf.c \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdio.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdarg.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/stdio/doprnt.h
+/home/jianan/18342/lab3/lab3-master/tasks/libc/stdio/sprintf.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/libc/stdio/sprintf.c \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdio.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdarg.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/stdio/doprnt.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdio.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdio.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdarg.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdarg.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/stdio/doprnt.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/stdio/doprnt.h:

@@ -1,8 +1,8 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/stdlib/ctype.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/libc/stdlib/ctype.c \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/ctype.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/inline.h
+/home/jianan/18342/lab3/lab3-master/tasks/libc/stdlib/ctype.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/libc/stdlib/ctype.c \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/ctype.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/inline.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/ctype.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/ctype.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/inline.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/inline.h:

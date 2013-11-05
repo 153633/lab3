@@ -24,11 +24,9 @@
 
 uint32_t global_data;
 
-char inbuf[MAXINPUTSIZE];			// The buffer of the read_sys function; used to store all the input data from the command line.
-int inbufindex = 0;				// Pointer of inbuf[MAXINPUTSIZE] buffer.
 
 int32_t read_sys(int, char*, uint32_t);		// Read syscall function, read input from STDIN
-int32_t write_sys(int, char*, uint32_t);		// Write syscall function, write output to STDOUT
+int32_t write_sys(int, char*, uint32_t);	// Write syscall function, write output to STDOUT
 void exit_sys(int);				// Exit syscall function
 uint32_t time_sys();
 void sleep_sys(uint32_t);
@@ -121,7 +119,7 @@ void sleep_sys(uint32_t msec) {
 	system_time = system_time + current_time - start_time;		// update system time
 
 	reg_write(OSTMR_OIER_ADDR, OSTMR_OIER_E0);			// unmask OIER
-
+	reg_write(OSTMR_OSCR_ADDR, 0);					// reset the OSCR
 	//printf("oscr: %d\n",reg_read(OSTMR_OSCR_ADDR));
 	printf("end sleeping...current system time: %d\n", system_time);
 }
@@ -141,70 +139,46 @@ int32_t read_sys(int fd, char *buf, uint32_t count) {
 	if ((buf+count) > (char *)0xa3000000)
 		return -EFAULT;
 
-	// Read from STDIN and store the input into buf. It is divided into two steps.
-	// First step, store whatever inputs from STDIN to inbuf and print them to the STDOUT
+	// Read from STDIN and store the input into buf. 
 	uint32_t i;
-	if (inbufindex == 0) {
-		for (i = 0; i < MAXINPUTSIZE; i++) {
-			while(!tstc())
-				continue;
-			
-			inbuf[i] = getc();
-		
-			// Check if the user enters an EOT
-			if(inbuf[i] == 4)
-		        {
-				break;
-		        }
-
-			// Check if the user enters a backspace
-			else if(inbuf[i] == 127)
-			{
-				// Check if the backspace is the first character
-				if(i != 0)
-				{
-					i -= 2;
-					puts("\b \b");
-				}
-				else
-					i--;
-			}
-			// Check if the user enters a newline or carriage return
-			else
-			{
-				putc(inbuf[i]);
-				if((inbuf[i] == '\n') || (inbuf[i] == '\r'))
-				{
-					putc('\n'); 
-					break;
-				}	
-			}				
-		}// end input from STDIN
-		if (i == MAXINPUTSIZE - 1)
-			printf("End input from STDIN!\n");
-	}
-
-	// Second step, dump inbuf to buf. Dump "count"(the size of the buf) number of characters each time.
 	for (i = 0; i < count; i++) {
-		if (inbufindex < MAXINPUTSIZE) {
-			buf[i] = inbuf[inbufindex];
-			inbufindex++;
-			// Check if the user enters an EOT
-			if (buf[i] == 4) {
-				inbufindex = 0;
-				return i;
+		while(!tstc())
+			continue;
+			
+		buf[i] = getc();
+		
+		// Check if the user enters an EOT
+		if(buf[i] == 4)
+	        {
+			return i;
+	        }
+
+		// Check if the user enters a backspace
+		else if(buf[i] == 127)
+		{
+			// Check if the backspace is the first character
+			if(i != 0)
+			{
+				i -= 2;
+				puts("\b \b");
 			}
-			// Check if the user enters a newline or carriage return
-			else if((buf[i] == '\n') || (buf[i] == '\r')) {
-				inbufindex = 0;
-				return ++i;	
-			}
+			else
+				i--;
 		}
-		else {	
-			inbufindex = 0;
-			break;
-		}
-	}
+		// Check if the user enters a newline or carriage return
+		else
+		{
+			putc(buf[i]);
+			if((buf[i] == '\n') || (buf[i] == '\r'))
+			{
+				putc('\n'); 
+				return ++i;
+			}	
+		}				
+	}// end input from STDIN
+	// If the buffer is full and the last element is not a '\n' or '\r', then print a new line in the end
+	if((i == 10) && (buf[count-1] != '\n') && (buf[count-1] != '\r'))
+		putc('\n');
 	return i;
 }
 
@@ -320,9 +294,9 @@ void install_irqhandler() {
 
 void C_IRQ_Handler() {
 	system_time++;
-	printf("%d\n", system_time);
-	printf("Timer interrupt!\n");
+	//printf("%d\n", system_time);
+	//printf("Timer interrupt!\n");
 	reg_write(OSTMR_OSCR_ADDR, 0);			// reset the OSCR
 	reg_set(OSTMR_OSSR_ADDR, 1);
-	printf("Return from interrupt!\n");
+	//printf("Return from interrupt!\n");
 }

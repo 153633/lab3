@@ -1,11 +1,11 @@
-/home/tianyihuang/Documents/18342/lab3/kernel/arm/psr.o:  \
- /home/tianyihuang/Documents/18342/lab3/kernel/arm/psr.c \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/psr.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h
+/home/jianan/18342/lab3/lab3-master/kernel/arm/psr.o:  \
+ /home/jianan/18342/lab3/lab3-master/kernel/arm/psr.c \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/types.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/psr.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/inline.h
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/types.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/psr.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/psr.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/inline.h:

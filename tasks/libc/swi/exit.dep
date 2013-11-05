@@ -1,8 +1,8 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/swi/exit.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/libc/swi/exit.S \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/asm.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/swi.h
+/home/jianan/18342/lab3/lab3-master/tasks/libc/swi/exit.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/libc/swi/exit.S \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/asm.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/swi.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/asm.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/asm.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/swi.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/swi.h:

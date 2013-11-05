@@ -1,11 +1,11 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/stdlib/atoi.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/libc/stdlib/atoi.c \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/ctype.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/inline.h
+/home/jianan/18342/lab3/lab3-master/tasks/libc/stdlib/atoi.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/libc/stdlib/atoi.c \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdlib.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/ctype.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/inline.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdlib.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/ctype.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/ctype.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/inline.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/inline.h:

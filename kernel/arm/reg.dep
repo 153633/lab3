@@ -1,11 +1,11 @@
-/home/tianyihuang/Documents/18342/lab3/kernel/arm/reg.o:  \
- /home/tianyihuang/Documents/18342/lab3/kernel/arm/reg.c \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/types.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h \
-  /home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h
+/home/jianan/18342/lab3/lab3-master/kernel/arm/reg.o:  \
+ /home/jianan/18342/lab3/lab3-master/kernel/arm/reg.c \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/types.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/arm/reg.h \
+  /home/jianan/18342/lab3/lab3-master/kernel/include/inline.h
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/types.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/arm/reg.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/arm/reg.h:
 
-/home/tianyihuang/Documents/18342/lab3/kernel/include/inline.h:
+/home/jianan/18342/lab3/lab3-master/kernel/include/inline.h:

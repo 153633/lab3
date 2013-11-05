@@ -1,23 +1,23 @@
-/home/tianyihuang/Documents/18342/lab3/tasks/rot13/rot13.o:  \
- /home/tianyihuang/Documents/18342/lab3/tasks/rot13/rot13.c \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/errno.h \
-  /home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/errno.h
+/home/jianan/18342/lab3/lab3-master/tasks/rot13/rot13.o:  \
+ /home/jianan/18342/lab3/lab3-master/tasks/rot13/rot13.c \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/fileno.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/unistd.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdlib.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/errno.h \
+  /home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/errno.h
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/fileno.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/fileno.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/unistd.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/unistd.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/sys/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/sys/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/types.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/types.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/stdlib.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/stdlib.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/errno.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/errno.h:
 
-/home/tianyihuang/Documents/18342/lab3/tasks/libc/include/bits/errno.h:
+/home/jianan/18342/lab3/lab3-master/tasks/libc/include/bits/errno.h:

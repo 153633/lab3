@@ -17,10 +17,11 @@
 int main(int argc,char* argv[]) {        
 
         int readResult;			// readResult stores the return value of read
-		int writeResult;		// writeResult stores the return value of write
-		int writeloc;          		// writeloc stores the index of the last character we write
+	int writeResult;		// writeResult stores the return value of write
+	int writeloc;          		// writeloc stores the index of the last character we write
         char inBuffer[N];		// inBuffer is the buffer storing input
-		char outBuffer[N]; 		// outBuffer stores the output values
+	char outBuffer[N+1]; 		// outBuffer stores the output values
+	outBuffer[N] = '\n';		// outBuffer has an additional element - a new line character; when the buffer is full, it will print a new line for the new line of input
       	int tmp;
 
 
@@ -66,6 +67,10 @@ int main(int argc,char* argv[]) {
 			if (writeResult > 0) writeloc += writeResult;	// in case write returns short count, use 'writeloc' to locate the last character we write
 		} while (writeResult > 0 && writeloc != readResult);	// if it has not yet ouput all the characters that we read (write returns short count), 
 									// then continue writing
+
+		// if the buffer is full, then print a new line for new line of input
+		if ((readResult == 10) && (outBuffer[N-1] != '\n') && (outBuffer[N-1] != '\r'))
+			writeResult = write(STDOUT_FILENO, outBuffer + N, 1);
 
 		if (writeResult < 0) {					// as long as error occurs in write, it terminates with status 1
 			exit(1);
