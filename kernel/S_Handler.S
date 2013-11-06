@@ -17,7 +17,11 @@ S_Handler:
         str     r2, [sp, #14*4]         @ save spsr on stack                                        
         mov     r1, sp                                                          
         ldr     r0, [lr, #-4]           @ get swi number from the user app                    
-        bic     r0, r0, #0xff000000           
+        bic     r0, r0, #0xff000000
+
+	ldr	r4, =rr8		@ added by lu
+	ldr	r8, [r4]
+           
         bl      getSWI					@ call dispatcher
         ldr     r5, =value		
         str     r0, [r5]                @ store return value of syscalls                          

@@ -168,12 +168,12 @@ int32_t read_sys(int fd, char *buf, uint32_t count) {
 		// Check if the user enters a newline or carriage return
 		else
 		{
-			putc(buf[i]);
 			if((buf[i] == '\n') || (buf[i] == '\r'))
 			{
 				putc('\n'); 
 				return ++i;
-			}	
+			}
+			putc(buf[i]);	
 		}				
 	}// end input from STDIN
 	// If the buffer is full and the last element is not a '\n' or '\r', then print a new line in the end

@@ -28,6 +28,7 @@ extern int link;				// stores the old svc link register, which has the address o
 extern int value;				// stores return value of syscall
 extern int ExitStatus;				// stores exit status from user app to kernel to system
 extern uint32_t system_time;
+extern int rr8;
 
 void S_Handler(int);				// declares S_Handler
 void Usermode(int argc, char *argv[]);		// declares Usermode which prepares for and runs user app

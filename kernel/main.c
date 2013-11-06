@@ -87,17 +87,17 @@ uint32_t time_sys() {
 
 void sleep_sys(uint32_t msec) {
 
-	printf("sleeping %d ms\n", msec);
-	printf("start from system time: %d\n", system_time);
+	//printf("sleeping %d ms\n", msec);
+	//printf("start from system time: %d\n", system_time);
 
 	reg_write(OSTMR_OIER_ADDR, 0);			// mask, make sure there's no timer interrupts
 	reg_write(OSTMR_OSSR_ADDR, OSTMR_OSSR_M0);	// clear the bit, otherwise there might be an interrupt after syscall
 
 	reg_write(OSTMR_OSCR_ADDR, 0xff0fffff);		// for test
-	printf("Assume oscr starts from %x\n",reg_read(OSTMR_OSCR_ADDR));
+	//printf("Assume oscr starts from %x\n",reg_read(OSTMR_OSCR_ADDR));
 
 	uint32_t start_time = reg_read(OSTMR_OSCR_ADDR)/32500;		// start time
-	printf("start time: %d\n", start_time);
+	//printf("start time: %d\n", start_time);
 	uint32_t current_time = start_time;				// current time
 	uint32_t tmp_time;						// tmp_time stores oscr
 	uint32_t current_time_base = 0;					// 'base' is for continuing computing current time after oscr reaches UINT32_MAX
@@ -115,13 +115,13 @@ void sleep_sys(uint32_t msec) {
 		current_time = current_time_base + tmp_time/32500;	// update current time
 	}
 
-	printf("end time: %d\n", current_time);
+	//printf("end time: %d\n", current_time);
 	system_time = system_time + current_time - start_time;		// update system time
 
 	reg_write(OSTMR_OIER_ADDR, OSTMR_OIER_E0);			// unmask OIER
 	reg_write(OSTMR_OSCR_ADDR, 0);					// reset the OSCR
 	//printf("oscr: %d\n",reg_read(OSTMR_OSCR_ADDR));
-	printf("end sleeping...current system time: %d\n", system_time);
+	//printf("end sleeping...current system time: %d\n", system_time);
 }
 
 

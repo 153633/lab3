@@ -57,9 +57,9 @@ int main(int argc, char** argv)
 	while ((readResult = read(STDIN_FILENO, Buffer, N)) > 0) {
 		Time = time() - Time;
 		printf("%d",Time);
-		printf("\n");
 		timeSpentInt = (int) (Time/100);
 		timeSpentFloat = ((int) (Time/10)) - timeSpentInt*10;
+		printf("4");
 		writeloc = 0;
 		do {
 			writeResult = write(STDOUT_FILENO, Buffer + writeloc, readResult);
@@ -68,6 +68,8 @@ int main(int argc, char** argv)
 									// then continue writing
 		//write(STDOUT_FILENO, Buffer, readResult);
 
+
+		printf("5");
 		printf("Time spent: ");
 		printf("%d",timeSpentInt);
 		printf(".");

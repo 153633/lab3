@@ -5,15 +5,17 @@
 @	       	Jianan Lu <jiananl@andrew.cmu.edu>
 @ Date:    	10/23/2013
 
-	.file	"restore.S"
-	.text
-	.global restore
+        .file	"restore.S"
+		.text
+	    .global restore
 
 restore:
 		ldr     r5, =oldspsr
 		ldr     r4, [r5]         @ restore supervisor modecpsr        
+
 		msr     cpsr, r4
 		ldr     r5, =oldsp
-		ldr	sp, [r5]         @ restore supervisor sp	 
+		ldr	sp, [r5]             @ restore supervisor sp
+		 
 		ldmfd   sp!, {r4-r11}    @ restore register include R8 that may be used in usermode}
-		b       lr               @ return to kernel main
+		bx      lr               @ return to kernel main

@@ -18,4 +18,8 @@ restore:
 		ldr	sp, [r5]             @ restore supervisor sp
 		 
 		ldmfd   sp!, {r4-r11}    @ restore register include R8 that may be used in usermode}
+
+		ldr	r3, =rr8		@ added by lu
+		ldr	r8, [r3]
+
 		bx      lr               @ return to kernel main
